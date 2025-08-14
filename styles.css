@@ -89,6 +89,16 @@ section {
     box-shadow: 0 0 15px rgba(255, 126, 0, 0.6);
 }
 
+#proyectos {
+    text-align: center;
+}
+
+#proyectos h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -224,6 +234,12 @@ footer {
     transform: translateY(-5px);
     box-shadow: 0 0 15px rgba(255, 126, 0, 0.6);
 }
+
+.habilidad h3 {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
 
 .habilidad h3 {
     color: var(--accent-color);
