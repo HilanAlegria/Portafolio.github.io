@@ -1,3 +1,4 @@
+
 const scrollElements = document.querySelectorAll(".scroll-fade");
 
 const elementInView = (el, offset = 100) => {
@@ -7,7 +8,6 @@ const elementInView = (el, offset = 100) => {
         (window.innerHeight || document.documentElement.clientHeight) - offset
     );
 };
-
 const displayScrollElement = (element) => {
     element.classList.add("visible");
 };
@@ -25,6 +25,5 @@ const handleScrollAnimation = () => {
         }
     });
 };
-
 window.addEventListener("scroll", handleScrollAnimation);
 handleScrollAnimation();
