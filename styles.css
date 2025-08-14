@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Merriweather', serif;
+    font-family: 'poppins', serif;
     margin: 0;
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -54,7 +54,6 @@ section {
     margin: auto;
 }
 
-/* Contenedor de proyectos */
 .proyectos {
     display: flex;
     flex-wrap: wrap;
@@ -62,7 +61,6 @@ section {
     justify-content: center;
 }
 
-/* Tarjeta de proyecto */
 .proyecto {
     flex: 1 1 calc(33.333% - 2rem);
     max-width: calc(33.333% - 2rem);
@@ -78,7 +76,6 @@ section {
     text-align: center;
 }
 
-/* Imagen de proyecto */
 .proyecto img {
     width: 100%;
     height: 180px;
@@ -87,7 +84,6 @@ section {
     margin-bottom: 0.8rem;
 }
 
-/* Hover */
 .proyecto:hover {
     transform: translateY(-5px);
     box-shadow: 0 0 15px rgba(255, 126, 0, 0.6);
@@ -126,7 +122,6 @@ footer {
     background-color: var(--card-color);
 }
 
-/* Perfil */
 .perfil-container {
     display: flex;
     align-items: center;
@@ -159,7 +154,6 @@ footer {
     object-fit: cover;
 }
 
-/* Responsivo */
 @media (max-width: 992px) {
     .proyecto {
         flex: 1 1 calc(50% - 2rem);
@@ -185,7 +179,7 @@ footer {
     box-shadow: 0 4px 15px rgba(0,0,0,0.5);
     max-width: 900px;
     margin: 2rem auto;
-    border-left: 6px solid #d48207; /* Toque cálido */
+    border-left: 6px solid #d48207; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -195,7 +189,7 @@ footer {
 }
 
 #sobre-mi h2 {
-    color: #ffb347; /* Color cálido en título */
+    color: #ffb347; 
     font-family: 'Merriweather', serif;
     font-size: 2rem;
     margin-bottom: 1rem;
