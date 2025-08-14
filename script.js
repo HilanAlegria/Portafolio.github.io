@@ -1,13 +1,3 @@
-// ====== Modo Claro / Oscuro ======
-const themeToggle = document.getElementById("theme-toggle");
-themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("light");
-    themeToggle.textContent = document.body.classList.contains("light")
-        ? "🌙 Modo Oscuro"
-        : "🌞 Modo Claro";
-});
-
-// ====== Animación al hacer scroll ======
 const scrollElements = document.querySelectorAll(".scroll-fade");
 
 const elementInView = (el, offset = 100) => {
