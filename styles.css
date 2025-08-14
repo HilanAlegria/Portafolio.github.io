@@ -70,7 +70,7 @@ section {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 2px solid transparent;
     background-image: linear-gradient(var(--card-color), var(--card-color)),
-                      linear-gradient(45deg, #ff7e00, #ffb347);
+    linear-gradient(45deg, #ff7e00, #ffb347);
     background-origin: border-box;
     background-clip: padding-box, border-box;
     text-align: center;
@@ -213,31 +213,40 @@ footer {
 
 .habilidades-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1rem;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 0.8rem 2rem; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
 }
 
 .habilidad {
-    background-color: var(--card-color);
-    border-radius: 8px;
-    padding: 1rem;
-    border: 2px solid transparent;
-    background-image: linear-gradient(var(--card-color), var(--card-color)),
-                      linear-gradient(45deg, #ff7e00, #ffb347);
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: none; 
+    padding: 0;
+    border: none;
+    text-align: left;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; 
 }
 
-.habilidad:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 15px rgba(255, 126, 0, 0.6);
-}
-
-.habilidad h3 {
+.habilidad i {
+    font-size: 2rem; 
     color: var(--accent-color);
-    margin-bottom: 0.5rem;
+}
+
+i {
+    font-size: 3rem;
+    vertical-align: middle;
+    color: var(--accent-color);
+    transition: transform 0.3s, color 0.3s;
+}
+
+i:hover {
+    transform: scale(1.2);
+    color: #ff7e00;
 }
 
 
