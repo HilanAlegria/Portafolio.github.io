@@ -1,29 +1,17 @@
 
-const scrollElements = document.querySelectorAll(".scroll-fade");
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(".scroll-fade");
 
-const elementInView = (el, offset = 100) => {
-    const elementTop = el.getBoundingClientRect().top;
-    return (
-        elementTop <=
-        (window.innerHeight || document.documentElement.clientHeight) - offset
-    );
-};
-const displayScrollElement = (element) => {
-    element.classList.add("visible");
-};
-
-const hideScrollElement = (element) => {
-    element.classList.remove("visible");
-};
-
-const handleScrollAnimation = () => {
-    scrollElements.forEach((el) => {
-        if (elementInView(el, 150)) {
-            displayScrollElement(el);
-        } else {
-            hideScrollElement(el);
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
         }
-    });
-};
-window.addEventListener("scroll", handleScrollAnimation);
-handleScrollAnimation();
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  elements.forEach((el) => observer.observe(el));
+});
