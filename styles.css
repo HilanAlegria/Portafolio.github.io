@@ -240,9 +240,3 @@ i:hover {
     opacity: 1;
     transform: none;
 }
-
-
-.habilidad h3 {
-    color: var(--accent-color);
-    margin-bottom: 0.5rem;
-}
