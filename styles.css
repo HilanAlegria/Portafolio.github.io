@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Merriweather', serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -108,18 +108,18 @@ section {
     text-align: center;
 }
 
+/* 🔹 CAMBIO IMPORTANTE: ahora los proyectos usan grid para que se vean en 2 columnas */
 .proyectos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
     justify-content: center;
 }
+
 .proyecto {
-    flex: 1 1 calc(33.333% - 2rem);
-    max-width: calc(33.333% - 2rem);
     background-color: var(--card-color);
-    padding: 1rem;
-    border-radius: 5px;
+    padding: 1.5rem;
+    border-radius: 8px;
     border: 2px solid transparent;
     background-image: linear-gradient(var(--card-color), var(--card-color)),
                       linear-gradient(45deg, #ff7e00, #ffb347);
@@ -130,25 +130,30 @@ section {
 }
 .proyecto img {
     width: 100%;
-    height: 180px;
+    height: 220px;  /* 🔹 Más grandes */
     object-fit: cover;
     border-radius: 5px;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
 }
 .proyecto:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 15px rgba(255, 126, 0, 0.6);
+    box-shadow: 0 0 18px rgba(255, 126, 0, 0.7);
 }
 
+/* 🔹 Estilo especial para el título de Proyectos */
+#proyectos h2 {
+    font-size: 3rem; /* más grande */
+    color: var(--accent-color); /* naranja */
+    margin-bottom: 2rem;
+}
+
+/* Responsive */
 @media (max-width: 992px) {
-    .proyecto {
-        flex: 1 1 calc(50% - 2rem);
+    .proyectos {
+        grid-template-columns: 1fr; /* 🔹 en tablets/móviles pasa a 1 columna */
     }
 }
 @media (max-width: 600px) {
-    .proyecto {
-        flex: 1 1 100%;
-    }
     .perfil-container {
         flex-direction: column;
         text-align: center;
@@ -239,4 +244,29 @@ i:hover {
 .scroll-fade.is-visible {
     opacity: 1;
     transform: none;
+}
+
+/* Botón de idioma */
+.lang-switch {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+}
+.lang-switch button {
+    background: #d48207;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    transition: transform 0.2s, background 0.3s;
+}
+.lang-switch button:hover {
+    transform: scale(1.1);
+    background: #ff9e33;
 }
